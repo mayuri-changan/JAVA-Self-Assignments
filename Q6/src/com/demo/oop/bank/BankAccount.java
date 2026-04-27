@@ -1,0 +1,35 @@
+package com.demo.oop.bank;
+
+public abstract class BankAccount {
+	
+	    private String accountNumber;
+	    private double balance;
+
+	    public BankAccount(String accountNumber, double balance) {
+	        this.accountNumber = accountNumber;
+	        this.balance = balance;
+	    }
+
+	    public String getAccountNumber() {
+	        return accountNumber;
+	    }
+
+	    public double getBalance() {
+	        return balance;
+	    }
+
+	    public void deposit(double amount) {
+	        if (amount > 0) {
+	            balance += amount;
+	        }
+	    }
+
+	    public abstract void withdraw(double amount);
+
+	    public void showBalance() {
+	        System.out.println("Account No: " + accountNumber +
+	                ", Balance: " + balance);
+	    }
+	}
+
+
